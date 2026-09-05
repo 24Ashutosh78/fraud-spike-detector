@@ -1,6 +1,8 @@
 # Fraud-Spike Detector — AI Risk Manager Track 
 
 **Loss class:** Card-transaction fraud (defense-only)
+
+
 **Deliverable:** A working two-layer detector with measured precision/recall and cost-weighted analysis on a held-out, time-forward, calendar-based test set.
 
 ---
