@@ -111,7 +111,7 @@ This package is self-contained — the data is included, so it re-runs end to en
 - `outputs/spike_entity_metrics_v.json` — full Layer 2 metrics
 - `outputs/transaction_classifier_metrics_v.png`, `outputs/spike_entity_chart.png` — plots
 - `outputs/lgbm_fraud_classifier_v.txt` — saved trained model
-- `v1_ulb_dataset/` — the earlier pass on the public anonymized ULB dataset, kept for comparison
+
 
 Every stage's output is included, so nothing has to be rebuilt to inspect or re-score — but every script that produced them is included too, so any stage can be re-run and reproduced from scratch.
 
@@ -123,14 +123,14 @@ pip install pandas numpy scikit-learn lightgbm matplotlib pyarrow
 # data/all_transactions.parquet and data/featured_transactions.parquet are
 # already included, so the two steps below are optional - only needed if
 # you want to rebuild from the raw daily files or change the features:
-unzip -o data/daily_raw.zip -d .
-python3 consolidate_data.py
-python3 feature_engineering.py
+unzip -o data/daily_raw.zip -d . (Not required I unzip the file and data is present in data folder)
+python consolidate_data.py
+python feature_engineering.py
 
 # required - these produce the outputs/ folder (already included, but this
 # regenerates it):
-python3 pipeline_v2.py
-python3 spike_detector_v2.py
+python pipeline_v2.py
+python spike_detector_v2.py
 ```
 
 ## 7. Honest next steps (scoped out for time)
