@@ -3,8 +3,6 @@
 **Loss class:** Card-transaction fraud (defense-only)
 **Deliverable:** A working two-layer detector with measured precision/recall and cost-weighted analysis on a held-out, time-forward, calendar-based test set.
 
-This is a rebuild of the first pass on the anonymized public ULB dataset — that version is kept in `v1_ulb_dataset/` for reference. This version uses the user's own 183 daily files, a much better fit for this track because it has real customer/terminal entity IDs.
-
 ---
 
 ## 1. Dataset
