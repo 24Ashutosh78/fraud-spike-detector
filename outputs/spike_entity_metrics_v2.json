@@ -1,0 +1,104 @@
+{
+  "method": "causal rolling z-score of weekly total $ amount, trailing 8-week baseline per entity",
+  "test_period": "weeks starting 2018-08-25 onward",
+  "results": {
+    "terminal": {
+      "z_gt_2.0": {
+        "precision": 0.11304347826086956,
+        "recall": 0.28910303928836173,
+        "flagged": 3450,
+        "confusion_matrix_[[tn,fp],[fn,tp]]": [
+          [
+            45591,
+            3060
+          ],
+          [
+            959,
+            390
+          ]
+        ]
+      },
+      "z_gt_3.0": {
+        "precision": 0.15413533834586465,
+        "recall": 0.15196441808747221,
+        "flagged": 1330,
+        "confusion_matrix_[[tn,fp],[fn,tp]]": [
+          [
+            47526,
+            1125
+          ],
+          [
+            1144,
+            205
+          ]
+        ]
+      },
+      "z_gt_4.0": {
+        "precision": 0.20912547528517111,
+        "recall": 0.08154188287620459,
+        "flagged": 526,
+        "confusion_matrix_[[tn,fp],[fn,tp]]": [
+          [
+            48235,
+            416
+          ],
+          [
+            1239,
+            110
+          ]
+        ]
+      },
+      "entity_weeks_evaluated": 50000,
+      "entity_weeks_with_fraud": 1349
+    },
+    "customer": {
+      "z_gt_2.0": {
+        "precision": 0.15300546448087432,
+        "recall": 0.12438302073050346,
+        "flagged": 1647,
+        "confusion_matrix_[[tn,fp],[fn,tp]]": [
+          [
+            21529,
+            1395
+          ],
+          [
+            1774,
+            252
+          ]
+        ]
+      },
+      "z_gt_3.0": {
+        "precision": 0.2,
+        "recall": 0.06071076011846002,
+        "flagged": 615,
+        "confusion_matrix_[[tn,fp],[fn,tp]]": [
+          [
+            22432,
+            492
+          ],
+          [
+            1903,
+            123
+          ]
+        ]
+      },
+      "z_gt_4.0": {
+        "precision": 0.30337078651685395,
+        "recall": 0.03998025666337611,
+        "flagged": 267,
+        "confusion_matrix_[[tn,fp],[fn,tp]]": [
+          [
+            22738,
+            186
+          ],
+          [
+            1945,
+            81
+          ]
+        ]
+      },
+      "entity_weeks_evaluated": 24950,
+      "entity_weeks_with_fraud": 2026
+    }
+  }
+}

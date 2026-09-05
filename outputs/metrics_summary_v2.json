@@ -1,0 +1,81 @@
+{
+  "dataset": "Fraud Detection Handbook simulator, 183 days Apr-Sep 2018 (real CUSTOMER_ID/TERMINAL_ID)",
+  "n_transactions": 1754155,
+  "n_fraud_total": 14681,
+  "fraud_rate_pct": 0.8369271814634397,
+  "split": {
+    "train_rows": 1169723,
+    "train_fraud": 9465,
+    "train_range": "2018-04-01 to 2018-07-31",
+    "val_rows": 296559,
+    "val_fraud": 2669,
+    "val_range": "2018-08-01 to 2018-08-31",
+    "test_rows": 287873,
+    "test_fraud": 2547,
+    "test_range": "2018-09-01 to 2018-09-30"
+  },
+  "roc_auc_test": 0.9019967333682641,
+  "pr_auc_test": 0.7198443975149538,
+  "cost_model_assumptions": {
+    "false_positive_cost_usd": 4.0,
+    "false_negative_cost": "actual $ amount of the missed fraudulent transaction"
+  },
+  "operating_points": {
+    "cost_minimizing": {
+      "threshold": 0.81,
+      "precision": 0.5519219736087206,
+      "recall": 0.7553985080486847,
+      "f1": 0.63782529421515,
+      "total_cost_usd": 40826.44,
+      "fp_count": 1562,
+      "fn_count": 623,
+      "fn_dollar_cost_usd": 34578.44,
+      "fp_dollar_cost_usd": 6248.0
+    },
+    "fixed_0.5": {
+      "threshold": 0.5,
+      "precision": 0.24754058042302016,
+      "recall": 0.790341578327444,
+      "f1": 0.3770015919093548,
+      "confusion_matrix": [
+        [
+          279207,
+          6119
+        ],
+        [
+          534,
+          2013
+        ]
+      ]
+    },
+    "recall_target_90pct": {
+      "threshold": 0.16384323951432053,
+      "precision": 0.017095037069081255,
+      "recall": 0.8998822143698468,
+      "f1": 0.03355267491820438,
+      "confusion_matrix": [
+        [
+          153544,
+          131782
+        ],
+        [
+          255,
+          2292
+        ]
+      ]
+    }
+  },
+  "naive_baseline_cost_usd_no_detector": 329880.75,
+  "top_10_features": {
+    "CUST_AVGAMT_30D": 1425,
+    "log_amount": 1308,
+    "CUST_AVGAMT_7D": 1120,
+    "TERM_NBTX_30D_DELAY7D": 995,
+    "TERM_RISK_30D_DELAY7D": 975,
+    "TERM_NBTX_7D_DELAY7D": 842,
+    "CUST_NBTX_30D": 790,
+    "CUST_AVGAMT_1D": 762,
+    "CUST_NBTX_7D": 577,
+    "TERM_RISK_7D_DELAY7D": 555
+  }
+}
